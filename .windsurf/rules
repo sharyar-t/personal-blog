@@ -44,6 +44,3 @@
 - Prefer immutability for data:
 - Use readonly for immutable properties.
 - Use as const for literals that never change.
-
-# State Management & Logic
-- Use React Context for state management.
