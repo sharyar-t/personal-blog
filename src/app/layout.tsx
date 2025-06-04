@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "./globals.css";
+import Header from '@/components/Header';
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
@@ -20,11 +22,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${dmSans.variable} antialiased`}
+        className={`${dmSans.variable} antialiased min-h-svh p-4 sm:p-5 pb-0 sm:pb-0`}
       >
-        {children}
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <div className="container mx-auto max-w-[640px] h-svh">
+            <Header />
+            <div className="h-full mx-2 px-2.5 py-8 border-r border-l border-r-neutral-200 border-l-neutral-200 dark:border-r-neutral-700 dark:border-l-neutral-700">
+              {children}
+            </div>
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
