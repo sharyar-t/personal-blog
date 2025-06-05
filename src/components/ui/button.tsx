@@ -1,6 +1,9 @@
+"use client";
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
+import { motion } from "motion/react"
 
 import { cn } from "@/lib/utils"
 
@@ -56,4 +59,6 @@ function Button({
   )
 }
 
-export { Button, buttonVariants }
+const MotionButton = motion.create(Button);
+
+export { Button, buttonVariants, MotionButton }
