@@ -19,7 +19,7 @@ const menuItems: MenuItem[] = [
   { href: "/", label: "Home" },
   { href: "/blog", label: "Blog" },
   { href: "/about", label: "About" },
-  { href: "/newsletter", label: "Newsletter" },
+  { href: "/portfolio", label: "Portfolio" },
 ];
 
 const menuLinkClassName = "text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-neutral-0";
