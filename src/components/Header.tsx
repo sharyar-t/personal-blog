@@ -111,7 +111,7 @@ const Header = () => {
       <header className="bg-neutral-0 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-lg p-1.5">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center justify-center">
-            <Image src="/me.png" alt="me" width={40} height={40} priority={true} className="rounded-md" />
+            <Image src="/me.PNG" alt="me" width={40} height={40} priority={true} className="rounded-md" />
           </Link>
           <div className="flex items-center gap-1.5 sm:gap-5">
             <DesktopMenu />
