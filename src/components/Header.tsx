@@ -43,7 +43,7 @@ const DesktopMenu = () => {
   );
 };
 
-const MobileMenu = ({ isOpen }: { isOpen: boolean }) => {
+const MobileMenu = () => {
   const pathname = usePathname();
 
   const containerAnimation = {
@@ -121,7 +121,7 @@ const Header = () => {
         </div>
       </header>
       <AnimatePresence>
-        {isMobileMenuOpen && <MobileMenu isOpen={isMobileMenuOpen} />}
+        {isMobileMenuOpen && <MobileMenu />}
       </AnimatePresence>
     </div>
   );
